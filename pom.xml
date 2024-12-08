@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <java.version>15</java.version>
+        <java.version>21</java.version>
 
         <junit.version>5.6.2</junit.version>
         <assertj-core.version>3.16.1</assertj-core.version>
@@ -106,6 +106,18 @@
                     <configuration>
                         <argLine>--enable-preview</argLine>
                     </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+				    <artifactId>maven-jar-plugin</artifactId>
+				    <configuration>
+					    <archive>
+						    <manifest>
+							    <mainClass>be.guldentops.geert.lox.LoxMain</mainClass>
+						    </manifest>
+					    </archive>
+				    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
